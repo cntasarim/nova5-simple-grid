@@ -1,5 +1,4 @@
 Nova.booting((Vue, router, store) => {
-    // Form alanları için wrapper
     Vue.component('form-field-wrapper', {
         props: ['field'],
         computed: {
@@ -8,13 +7,12 @@ Nova.booting((Vue, router, store) => {
             }
         },
         template: `
-            <div :class="[sizeClass, 'px-2']">
+            <div :class="[sizeClass, 'px-2']" :data-size="field.size || 'w-full'">
                 <slot />
             </div>
         `
     });
 
-    // Panel bileşeni için flex düzeni
     Vue.component('panel', {
         props: ['name', 'fields'],
         template: `
