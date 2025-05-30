@@ -1,0 +1,29 @@
+{
+    "name": "cntasarim/nova5-simple-grid",
+    "description": "Simple grid system for Laravel Nova 5",
+    "type": "laravel-nova",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Cntasarim\\Nova5SimpleGrid\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+        "providers": [
+            "Cntasarim\\Nova5SimpleGrid\\FieldServiceProvider"
+        ]
+        }
+    },
+    "authors": [
+        {
+            "name": "cntasarim",
+            "email": "cntasarim@outlook.com.tr"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "php": "^8.1",
+        "laravel/nova": "^5.0"
+    }
+}
