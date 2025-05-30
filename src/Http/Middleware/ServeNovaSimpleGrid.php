@@ -1,8 +1,8 @@
 <?php
 
-namespace YourVendor\NovaSimpleGrid\Http\Middleware;
+namespace Cntasarim\Nova5SimpleGrid\Http\Middleware;
 
-use YourVendor\NovaSimpleGrid\NovaSimpleGrid;
+use Cntasarim\Nova5SimpleGrid\NovaSimpleGrid;
 
 class ServeNovaSimpleGrid
 {

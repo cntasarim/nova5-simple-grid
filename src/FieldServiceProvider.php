@@ -1,6 +1,6 @@
 <?php
 
-namespace YourVendor\NovaSimpleGrid;
+namespace Cntasarim\Nova5SimpleGrid;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
@@ -11,16 +11,14 @@ class FieldServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        // Nova'ya statik asset'leri sun
         $this->app->booted(function () {
-            $this->app['router']->middleware('nova', \YourVendor\NovaSimpleGrid\Http\Middleware\ServeNovaSimpleGrid::class);
+            $this->app['router']->middleware('nova', \Cntasarim\Nova5SimpleGrid\Http\Middleware\ServeNovaSimpleGrid::class);
         });
 
         Nova::serving(function (ServingNova $event) {
             Nova::script('nova-simple-grid', __DIR__.'/../resources/js/tool.js');
         });
 
-        // Alanlara size metodunu ekle
         Field::macro('size', function ($size) {
             return $this->withMeta(['size' => $size]);
         });

@@ -1,9 +1,10 @@
 <?php
 
-namespace YourVendor\NovaSimpleGrid;
+namespace Cntasarim\Nova5SimpleGrid;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
+use Illuminate\Http\Request;
 
 class NovaSimpleGrid extends Tool
 {
@@ -12,8 +13,13 @@ class NovaSimpleGrid extends Tool
         Nova::script('nova-simple-grid', __DIR__.'/../resources/js/tool.js');
     }
 
+    public function menu(Request $request)
+    {
+        return null; // No menu item for this tool
+    }
+
     public function renderNavigation()
     {
-        return null; // Şu an için navigasyon görünümü yok
+        return null; // Maintain compatibility or remove if not needed
     }
 }
